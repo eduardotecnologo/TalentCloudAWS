@@ -8,6 +8,6 @@
 
 - git commit -m "Primeiro commit"
 
-- git remote add origin <https://github.com/seu-usuario/seu-repositorio.git>
+- git remote add origin <https://github.com/eduardotecnologo/seu-repositorio.git>
 
 - git push -u origin master
