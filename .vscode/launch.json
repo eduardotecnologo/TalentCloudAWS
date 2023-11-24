@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Volumes/Arquivos/Git/TalentCloudAWS",
-      "program": "/Volumes/Arquivos/Git/TalentCloudAWS/build/Debug/outDebug"
+      "cwd": "/Users/edudeveloper/Git/TalentCloudAWS/CPP/Array",
+      "program": "/Users/edudeveloper/Git/TalentCloudAWS/CPP/Array/build/Debug/outDebug"
     }
   ]
 }
