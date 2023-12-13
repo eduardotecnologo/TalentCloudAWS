@@ -5,46 +5,67 @@
     font: inherit;
     vertical-align: baseline;
 }
+
 body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.h1 {
+    text-align: center;
+    color: #45a049;
+    font-size: larger;
+}
 
-    form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-    }
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
 
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
+.form-group {
+    margin-bottom: 12px;
+}
 
-    input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 12px;
-        box-sizing: border-box;
-    }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
 
-    button {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-    }
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
 
-    button:hover {
-        background-color: #45a049;
-    }
+.checkbox-group {
+    margin-bottom: 12px;
+}
+
+.checkbox-group label {
+    display: block;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
