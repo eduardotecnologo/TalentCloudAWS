@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.0
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - cluster.initial_master_nodes=elasticsearch
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - http.cors.enable=true
+      - http.cors.allow-origin="*" 
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./elasticsearch_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - observability
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.0
+    container_name: kibana
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_HOST: '["http://elasticsearch:9200"]'
+    networks:
+      - observability
+    depends_on:
+      - elasticsearch
+    command: ["./bin/kibana-docker", "--elasticsearch.hosts=http://elasticsearch:9200", "--timeout=120s"]
+
+networks:
+  observability:
+    driver: bridge
