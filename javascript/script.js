@@ -1,0 +1,1 @@
+let quantidadeSuntotal = document.getElementById
